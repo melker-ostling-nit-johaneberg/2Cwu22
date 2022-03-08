@@ -21,7 +21,7 @@ body{
 }
 
 #container1{
-    grid-template-rows: 15vh 5vh 40vh 40vh 40vh 30vh;
+    grid-template-rows: 15vh 5vh 60vh 60vh 60vh 30vh;
     grid-template-areas: 
     'hd'
     'nv'
@@ -32,7 +32,7 @@ body{
 }
 
 #container2{
-    grid-template-rows: 15vh 5vh 40vh 40vh 30vh;
+    grid-template-rows: 15vh 5vh 60vh 60vh 30vh;
     grid-template-areas: 
     'hd'
     'nv'
@@ -52,7 +52,7 @@ body{
 }
 
 #container4{
-    grid-template-rows: 15vh 5vh 50vh 50vh 50vh 30vh;
+    grid-template-rows: 15vh 5vh 70vh 70vh 50vh 30vh;
     grid-template-areas: 
     'hd hd'
     'nv nv'
@@ -62,6 +62,11 @@ body{
     'ft ft'; 
 }
 
+#bread_menu{
+    grid-template-areas: 'b1 b2 b3 b4';
+    margin: 0%;
+    flex-direction: row;
+}
 @media only screen and (max-width: 500px) {
     .a1{
         width: 100vw;
@@ -146,39 +151,83 @@ ul{
     padding: 0px;
 }
 
+article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    text-align: center;
+    margin: 0px 20vw;
+}
+
 a{
     color: var(--main_clr_dark);
     text-decoration: none;
 }
 .a1{
     grid-area: a1;
-    background-color: deepskyblue;
+    background-color: var(--main_clr_white);
 }
 
 .a2{
     grid-area: a2;
-    background-color: forestgreen;
+    background-color: var(--main_clr_white);
 }
 
 .a3{
     grid-area: a3;
-    background-color: lightcyan;
+    background-color: var(--main_clr_white);
 }
 
 #img1{
     grid-area: i1;
-    background-color: blueviolet;
+    width: cover;
+    max-width: 90%;
+    max-height: 90%;
+    margin: auto;
 }
 
 #img2{
     grid-area: i2;
-    background-color: darkslategray;
+    width: cover;
+    max-width: 90%;
+    max-height: 95%;
+    margin: auto;
 }
 
 #karta{
     grid-area: k1;
     background-color: lightseagreen;
 }
+
+#bread_0{
+    position: absolute;
+
+}
+
+#bread_1{
+    grid-area: b1;
+    width: 25vw;
+    padding-top: 40px;
+}
+
+#bread_2{
+    grid-area: b2;
+    width: 25vw;
+    padding-top: 40px;
+}
+
+#bread_3{
+    grid-area: b3;
+    width: 25vw;
+    padding-top: 40px;
+}
+
+#bread_4{
+    grid-area: b4;
+    width: 25vw;
+    padding-top: 40px;
+}
+
 
 #meny1{
     display: flex;
