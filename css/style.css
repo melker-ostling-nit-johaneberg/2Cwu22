@@ -21,9 +21,8 @@ body{
 }
 
 #container1{
-    grid-template-rows: 15vh 5vh 60vh 60vh 60vh 30vh;
+    grid-template-rows: 20vh 60vh 60vh 60vh 30vh;
     grid-template-areas: 
-    'hd'
     'nv'
     'a1'
     'a2'
@@ -119,11 +118,11 @@ body{
         display: none;}
 }
 
-header{
+/* header{
     display: flex;
     grid-area: hd;
     justify-content: center;
-}
+} */
 
 nav{
     display: flex;
@@ -144,9 +143,8 @@ ul{
   }
 
 .navbar{
-    height: 5vh;
     width: 100vw;
-    margin: 0px;
+    margin: auto;
     font-size: 20px;
     padding: 0px;
 }
@@ -178,7 +176,11 @@ a{
     background-color: var(--main_clr_white);
 }
 
-#img1{
+#img_0{
+    position: absolute;
+}
+
+#img_1{
     grid-area: i1;
     width: cover;
     max-width: 90%;
@@ -186,7 +188,7 @@ a{
     margin: auto;
 }
 
-#img2{
+#img_2{
     grid-area: i2;
     width: cover;
     max-width: 90%;
