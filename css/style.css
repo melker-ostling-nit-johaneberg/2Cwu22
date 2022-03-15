@@ -31,9 +31,8 @@ body{
 }
 
 #container2{
-    grid-template-rows: 15vh 5vh 60vh 60vh 30vh;
+    grid-template-rows: 20vh 60vh 60vh 30vh;
     grid-template-areas: 
-    'hd'
     'nv'
     'a1'
     'a2'
@@ -41,9 +40,8 @@ body{
 }
 
 #container3{
-    grid-template-rows: 15vh 5vh 40vh 40vh 30vh;
+    grid-template-rows: 20vh 80vh 60vh 30vh;
     grid-template-areas: 
-    'hd'
     'nv'
     'a1'
     'a2'
@@ -51,9 +49,8 @@ body{
 }
 
 #container4{
-    grid-template-rows: 15vh 5vh 70vh 70vh 50vh 30vh;
+    grid-template-rows: 20vh 70vh 70vh 50vh 30vh;
     grid-template-areas: 
-    'hd hd'
     'nv nv'
     'i1 a1'
     'a2 i2'
@@ -61,11 +58,31 @@ body{
     'ft ft'; 
 }
 
+#meny1{
+    display: flex;
+    display: grid;
+    height: auto;
+    margin: 0;
+    width: 100vw;
+    grid-template-areas:
+    'l1 l2 l3';
+}
+
+#bread_menu_background{
+    background-image: url(../img/debbie-widjaja-H_PXix_4Bwc-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    margin: 0;
+}
+
 #bread_menu{
     grid-template-areas: 'b1 b2 b3 b4';
     margin: 0%;
     flex-direction: row;
+    opacity: 1;
 }
+
 @media only screen and (max-width: 500px) {
     .a1{
         width: 100vw;
@@ -176,6 +193,16 @@ a{
     background-color: var(--main_clr_white);
 }
 
+.bread_list{
+    list-style: circle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    list-style-position: inside;
+    
+}
+
 #img_0{
     position: absolute;
 }
@@ -203,6 +230,10 @@ a{
 
 #bread_0{
     position: absolute;
+    width: 10%;
+    text-align: center;
+    margin: 0 45%;
+    opacity: 1;
 
 }
 
@@ -210,49 +241,47 @@ a{
     grid-area: b1;
     width: 25vw;
     padding-top: 40px;
+    opacity: 1;
 }
 
 #bread_2{
     grid-area: b2;
     width: 25vw;
     padding-top: 40px;
+    opacity: 1;
 }
 
 #bread_3{
     grid-area: b3;
     width: 25vw;
     padding-top: 40px;
+    opacity: 1;
 }
 
 #bread_4{
     grid-area: b4;
     width: 25vw;
     padding-top: 40px;
+    opacity: 1;
 }
 
-
-#meny1{
-    display: flex;
-    display: grid;
-    height: auto;
-    width: 100vw;
-    grid-template-areas:
-    'l1 l2 l3';
-}
 
 #l1{
     grid-area: l1;
     width: auto;
+    text-align: center;
 }
 
 #l2{
     grid-area: l2;
     width: auto;
+    text-align: center;
 }
 
 #l3{
     grid-area: l3;
     width: auto;
+    text-align: center;
 }
 footer{
     grid-area: ft;
