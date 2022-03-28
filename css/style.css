@@ -12,6 +12,10 @@ body{
     margin: 0%;
 }
 
+.header_mobil{
+    display: none;
+}
+
 .container{
     display: flex;
     display: grid;
@@ -69,11 +73,20 @@ body{
 }
 
 #bread_menu_background{
+    background-repeat: no-repeat;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#bread_menu_background{   
+    content: "";
     background-image: url(../img/debbie-widjaja-H_PXix_4Bwc-unsplash.jpg);
     background-size: cover;
-    background-repeat: no-repeat;
-    opacity: 0.5;
-    margin: 0;
+
+    opacity: 0.75;
 }
 
 #bread_menu{
@@ -84,11 +97,13 @@ body{
 }
 
 @media only screen and (max-width: 500px) {
-    .a1{
-        width: 100vw;
+    .a1, .a2, .a3{
+        width: 90vw;
+        margin: 5vw;
     }    
     #container1{
-        grid-template-rows: 10vh 40vh 40vh 40vh 10vh;
+        grid-template-rows: 10vh auto auto auto 10vh;
+        margin: 0;
         grid-template-areas: 
         'hd'
         'a1'
@@ -126,9 +141,15 @@ body{
         'ft'; 
     }
 
+    .header_mobil{
+        display: block;
+        background-color: brown;
+        grid-area: hd;
+    }
+
     nav{
         display: none;}
-    .navbar{
+    .navbar_dator{
         display: none;
     }
     #img2{
@@ -159,13 +180,20 @@ ul{
     margin: 0px 10%;
   }
 
-.navbar{
+.navbar_dator{
     width: 100vw;
     margin: auto;
     font-size: 20px;
     padding: 0px;
 }
 
+#nav_mobil{
+    position: absolute;
+    width: 50vw;
+    height: 130vh;
+    display: none;
+    background-color: var(--main_accent_clr);
+}
 article{
     display: flex;
     flex-direction: column;
