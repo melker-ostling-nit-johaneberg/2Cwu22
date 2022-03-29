@@ -12,6 +12,10 @@ body{
     margin: 0%;
 }
 
+.li_bread{
+    margin: 5px;
+}
+
 .header_mobil{
     display: none;
 }
@@ -25,7 +29,7 @@ body{
 }
 
 #container1{
-    grid-template-rows: 20vh auto auto auto 10vh;
+    grid-template-rows: 15vh auto auto auto 10vh;
     grid-template-areas: 
     'nv'
     'a1'
@@ -35,25 +39,25 @@ body{
 }
 
 #container2{
-    grid-template-rows: 20vh auto auto 30vh;
+    grid-template-rows: 15vh auto auto 10vh;
     grid-template-areas: 
     'nv'
     'a1'
-    'a2'
     'ft'; 
 }
 
 #container3{
-    grid-template-rows: 20vh auto auto 30vh;
+    grid-template-rows: 15vh auto 5vh auto 10vh;
     grid-template-areas: 
     'nv'
     'a1'
+    'm1'
     'a2'
     'ft'; 
 }
 
 #container4{
-    grid-template-rows: 20vh auto auto auto 30vh;
+    grid-template-rows: 15vh auto auto auto 10vh;
     grid-template-areas: 
     'nv nv'
     'i1 a1'
@@ -72,26 +76,20 @@ body{
     'l1 l2 l3';
 }
 
-#bread_menu_background{
-    background-repeat: no-repeat;
-    margin: 0;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-#bread_menu_background{   
-    content: "";
-    background-image: url(../img/debbie-widjaja-H_PXix_4Bwc-unsplash.jpg);
-    background-size: cover;
-}
 
 #bread_menu{
     grid-template-areas: 'b1 b2 b3 b4';
-    margin: 0%;
+    margin: 0;
     flex-direction: row;
-    opacity: 1;
+}
+
+#cake_menu{
+    background-image: url(../img/tårta_bakgrund.jpg);
+    background-size: cover;
+    grid-template-areas: 'c1 c2';
+    margin: 0;
+    flex-direction: row;
+    width: 100vw;
 }
 
 @media only screen and (max-width: 500px) {
@@ -115,7 +113,6 @@ body{
         grid-template-areas: 
         'hd'
         'a1'
-        'a2'
         'ft'; 
     }
     
@@ -139,6 +136,18 @@ body{
         'ft'; 
     }
 
+    #bread_menu{
+        grid-template-areas: 
+        'b1 b2' 
+        'b3 b4';
+        margin: 0;
+        flex-direction: row;
+    }
+
+    #bread_menu_background{
+        background-color: var(--main_accent_clr);
+    }
+
     .header_mobil{
         display: block;
         display: flex;
@@ -148,12 +157,7 @@ body{
         justify-content: center;
     }
 
-    nav{
-        display: none;}
-    .navbar_dator{
-        display: none;
-    }
-    #img2{
+    nav, .navbar_dator, #img2, #mellanrum{
         display: none;}
 }
 
@@ -164,6 +168,18 @@ body{
     #a1{
         margin-top: 0;
     }
+
+    #bread_menu_background{
+        background-repeat: no-repeat;
+        margin: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url(../img/bröd_bakgrund.jpg);
+        background-size: cover;
+    }
+    
 }
 
 /* header{
@@ -274,41 +290,53 @@ a{
 
 #bread_0{
     position: absolute;
-    width: 10%;
+    width: 50%;
     text-align: center;
-    margin: 0 45%;
-    opacity: 1;
-
+    margin: 0 25%;
 }
 
 #bread_1{
     grid-area: b1;
     width: 25vw;
     padding-top: 40px;
-    opacity: 1;
 }
 
 #bread_2{
     grid-area: b2;
     width: 25vw;
     padding-top: 40px;
-    opacity: 1;
 }
 
 #bread_3{
     grid-area: b3;
     width: 25vw;
     padding-top: 40px;
-    opacity: 1;
 }
 
 #bread_4{
     grid-area: b4;
     width: 25vw;
     padding-top: 40px;
-    opacity: 1;
 }
 
+#cake_0{
+    position: absolute;
+    width: 50%;
+    text-align: center;
+    margin: 0 25%;
+}
+
+#cake_1{
+    grid-area: c1;
+    width: 50vw;
+    padding-top: 40px;
+}
+
+#cake_2{
+    grid-area: c2;
+    width: 50vw;
+    padding-top: 40px;
+}
 
 #l1{
     grid-area: l1;
@@ -334,4 +362,12 @@ footer{
     justify-content: center;
     background-image: linear-gradient(var(--main_clr_white), var(--main_accent_clr));
 
+}
+
+#mellanrum{
+    grid-area: m1;
+}
+
+h2{
+    font-size: 3rem;
 }
