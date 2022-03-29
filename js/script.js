@@ -1,10 +1,14 @@
 
 function HamburgerMeny(){
-  let x = document.getElementById("nav_mobil");
-  if (x.style.display === "block") {
-    x.style.display = "none";
+  let nav_mobil = document.getElementById("nav_mobil");
+  let top = document.getElementById("top")
+  if (nav_mobil.style.display === "block") {
+    nav_mobil.style.display = "none";
+    top.style.marginTop = "0vh"
   } else {
-    x.style.display = "block";
+    nav_mobil.style.display = "block";
+    top.style.marginTop = "7.5vh"
+
   }
 }
 
