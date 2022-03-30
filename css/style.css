@@ -30,6 +30,7 @@ body{
 
 #container1{
     grid-template-rows: 15vh auto auto auto 10vh;
+    min-height: 110vh;
     grid-template-areas: 
     'nv'
     'a1'
@@ -39,7 +40,8 @@ body{
 }
 
 #container2{
-    grid-template-rows: 15vh auto auto 10vh;
+    grid-template-rows: 15vh auto 10vh;
+    min-height: 110vh;
     grid-template-areas: 
     'nv'
     'a1'
@@ -48,6 +50,7 @@ body{
 
 #container3{
     grid-template-rows: 15vh auto 5vh auto 10vh;
+    min-height: 110vh;
     grid-template-areas: 
     'nv'
     'a1'
@@ -58,6 +61,7 @@ body{
 
 #container4{
     grid-template-rows: 15vh auto auto auto 10vh;
+    min-height: 110vh;
     grid-template-areas: 
     'nv nv'
     'i1 a1'
@@ -66,14 +70,11 @@ body{
     'ft ft'; 
 }
 
-.meny1{
-    display: flex;
-    display: grid;
-    height: auto;
+#cafe_menu{
+    /* background-image: url(../img/tårta_bakgrund.jpg); */
+    background-size: cover;
     margin: 0;
     width: 100vw;
-    grid-template-areas:
-    'l1 l2 l3';
 }
 
 
@@ -109,7 +110,7 @@ body{
     }
     
     #container2{
-        grid-template-rows: 10vh auto auto 10vh;
+        grid-template-rows: 10vh auto 10vh;
         grid-template-areas: 
         'hd'
         'a1'
@@ -136,6 +137,14 @@ body{
         'ft'; 
     }
 
+    #cafe_menu{
+        flex-direction: column;
+        grid-template-areas: 
+        'cf1' 
+        'cf2' 
+        'cf3';
+    }
+
     #bread_menu{
         grid-template-areas: 
         'b1 b2' 
@@ -155,7 +164,21 @@ body{
         grid-area: hd;
         align-items: center;
         justify-content: center;
+    } 
+
+    .cafe_0{
+        top: 100px;
     }
+
+    .cafe_1{
+        padding-top: 75px;
+    }
+
+    #cafe_2, #cafe_3{
+        padding-top: 10px;
+    }
+
+
 
     nav, .navbar_dator, #img2, #mellanrum{
         display: none;}
@@ -168,6 +191,14 @@ body{
     #a1{
         margin-top: 0;
     }
+    #cafe_menu{
+        flex-direction: row;
+        grid-template-areas: 'cf1 cf2 cf3';
+    }
+    .cafe_1, #cafe_2, #cafe_3{
+        padding-top: 50px;
+    }
+
 
     #bread_menu_background{
         background-repeat: no-repeat;
@@ -217,7 +248,7 @@ ul{
     position: absolute;
     top: 10vh;
     width: 100vw;
-    height: 7.5vh;
+    height: 5vh;
     display: none;
     background-color: var(--main_accent_clr);
 }
@@ -260,7 +291,15 @@ a{
     align-items: center;
     flex-direction: column;
     list-style-position: inside;
-    
+}
+
+.cafe_list{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    list-style-position: inside;
 }
 
 #img_0{
@@ -298,25 +337,25 @@ a{
 #bread_1{
     grid-area: b1;
     width: 25vw;
-    padding-top: 40px;
+    padding-top: 50px;
 }
 
 #bread_2{
     grid-area: b2;
     width: 25vw;
-    padding-top: 40px;
+    padding-top: 50px;
 }
 
 #bread_3{
     grid-area: b3;
     width: 25vw;
-    padding-top: 40px;
+    padding-top: 50px;
 }
 
 #bread_4{
     grid-area: b4;
     width: 25vw;
-    padding-top: 40px;
+    padding-top: 50px;
 }
 
 #cake_0{
@@ -329,29 +368,36 @@ a{
 #cake_1{
     grid-area: c1;
     width: 50vw;
-    padding-top: 40px;
+    padding-top: 50px;
 }
 
 #cake_2{
     grid-area: c2;
     width: 50vw;
-    padding-top: 40px;
+    padding-top: 50px;
 }
 
-#l1{
-    grid-area: l1;
+.cafe_0{
+    position: absolute;
+    width: 50%;
+    text-align: center;
+    margin: 0 25%;
+}
+
+.cafe_1{
+    grid-area: cf1;
     width: auto;
     text-align: center;
 }
 
-#l2{
-    grid-area: l2;
+#cafe_2{
+    grid-area: cf2;
     width: auto;
     text-align: center;
 }
 
-#l3{
-    grid-area: l3;
+#cafe_3{
+    grid-area: cf3;
     width: auto;
     text-align: center;
 }
