@@ -10,14 +10,11 @@
   
 body{
     margin: 0%;
+    padding: 0%;
 }
 
 .li_bread{
     margin: 5px;
-}
-
-.header_mobil{
-    display: none;
 }
 
 .container{
@@ -60,7 +57,7 @@ body{
 }
 
 #container4{
-    grid-template-rows: 15vh auto auto auto 10vh;
+    grid-template-rows: 15vh auto auto 60vh 10vh;
     min-height: 110vh;
     grid-template-areas: 
     'nv nv'
@@ -95,9 +92,14 @@ body{
 
 @media only screen and (max-width: 500px) {
     .a1, .a2, .a3{
-        width: 90vw;
+        /* width: 90vw; */
         margin: 5vw;
     }    
+    .a0{
+        margin: 0;
+        margin-left: 10vw;
+        margin-right: 3vw;
+    }
     #container1{
         grid-template-rows: 10vh auto auto auto auto;
         margin: 0;
@@ -127,7 +129,7 @@ body{
     }
     
     #container4{
-        grid-template-rows: 10vh auto auto 30vh 50vh 10vh;
+        grid-template-rows: 10vh auto auto auto 50vh 10vh;
         grid-template-areas: 
         'hd'
         'i1'
@@ -153,7 +155,7 @@ body{
         flex-direction: row;
     }
 
-    #bread_menu_background{
+    .bread_menu_background{
         background-color: var(--main_accent_clr);
     }
 
@@ -177,19 +179,36 @@ body{
     #cafe_2, #cafe_3{
         padding-top: 10px;
     }
+    h2{
+        justify-content: flex-start;
+    }
+    li{
+        width: 25vw;
+        margin: 0;
+        text-align: center;
+    }
 
-
-
-    nav, .navbar_dator, #img2, #mellanrum{
+    nav, .navbar_dator, .img_2_div, #mellanrum #img_2{
         display: none;}
 }
 
 @media only screen and (min-width: 500px) {
-    #nav_mobil{
+    #nav_mobil, .header_mobil{
         display: none;
     }
+    .img_1_div, .img_2_div{
+        display: block;}
     #a1{
         margin-top: 0;
+    }
+    .a0{
+        margin: 0px 20vw;
+    }
+    h2{
+        justify-content: center;
+    }
+    li{
+        margin: 0px 10vw;
     }
     #cafe_menu{
         flex-direction: row;
@@ -199,8 +218,7 @@ body{
         padding-top: 50px;
     }
 
-
-    #bread_menu_background{
+    .bread_menu_background{
         background-repeat: no-repeat;
         margin: 0;
         width: 100%;
@@ -234,7 +252,6 @@ ul{
 
     li{
     color: var(--main_clr_dark);
-    margin: 0px 10%;
   }
 
 .navbar_dator{
@@ -254,14 +271,20 @@ ul{
 }
 
 .navbar_mobil{
+
+    display: flex;
     padding: 0;
+    margin: 0 5vw;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+}
 }
 article{
     display: flex;
     flex-direction: column;
     justify-content: center; 
     text-align: center;
-    margin: 0px 20vw;
 }
 
 a{
@@ -307,24 +330,38 @@ a{
 }
 
 .img_1{
-    grid-area: i1;
-    width: cover;
+
     max-width: 90%;
     max-height: 90%;
     margin: auto;
 }
 
 #img_2{
-    grid-area: i2;
-    width: cover;
     max-width: 90%;
-    max-height: 95%;
+    max-height: 90%;
     margin: auto;
+}
+
+.img_1_div, .img_2_div{
+    display: flex;
+    width: 50vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.img_1_div{
+    grid-area: i1;
+}
+
+.img_2_div{
+    grid-area: i2;
 }
 
 #karta{
     grid-area: k1;
-    background-color: lightseagreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #bread_0{
@@ -332,6 +369,7 @@ a{
     width: 50%;
     text-align: center;
     margin: 0 25%;
+    justify-content: center;
 }
 
 #bread_1{
@@ -382,6 +420,7 @@ a{
     width: 50%;
     text-align: center;
     margin: 0 25%;
+    justify-content: center;
 }
 
 .cafe_1{
@@ -415,5 +454,6 @@ footer{
 }
 
 h2{
+    display: flex;
     font-size: 3rem;
 }
