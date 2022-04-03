@@ -352,6 +352,7 @@ ul{
     top: 10vh;
     display: none;
     background-color: var(--main_accent_clr);
+    z-index: 2;
 }
 
 #top, #top_2{
