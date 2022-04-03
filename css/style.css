@@ -2,6 +2,7 @@
     --main_clr_dark:black;
     --main_clr_white: white;
     --main_accent_clr: lightgrey;
+    --main_dark_accent_clr: darkgrey;
   }
   
   ::-webkit-scrollbar{
@@ -28,6 +29,7 @@ body{
 #container1{
     grid-template-rows: 15vh auto auto auto 10vh;
     min-height: 110vh;
+    overflow-x: hidden;
     grid-template-areas: 
     'nv'
     'a1'
@@ -92,13 +94,15 @@ body{
 
 @media only screen and (max-width: 500px) {
     .a1, .a2, .a3{
-        /* width: 90vw; */
-        margin: 5vw;
-    }    
-    .a0{
         margin: 0;
+    }    
+    .a0, .aa{
+        text-align: left;
+        justify-content: flex-start;
+        margin: 5vw;
         margin-left: 10vw;
         margin-right: 3vw;
+        justify-content: left;
     }
     #container1{
         grid-template-rows: 10vh auto auto auto auto;
@@ -112,7 +116,7 @@ body{
     }
     
     #container2{
-        grid-template-rows: 10vh auto 10vh;
+        grid-template-rows: 10vh auto auto;
         grid-template-areas: 
         'hd'
         'a1'
@@ -120,7 +124,7 @@ body{
     }
     
     #container3{
-        grid-template-rows: 10vh auto auto 10vh;
+        grid-template-rows: 10vh auto auto auto;
         grid-template-areas: 
         'hd'
         'a1'
@@ -129,7 +133,7 @@ body{
     }
     
     #container4{
-        grid-template-rows: 10vh auto auto auto 50vh 10vh;
+        grid-template-rows: 10vh auto auto auto 50vh auto;
         grid-template-areas: 
         'hd'
         'i1'
@@ -149,14 +153,38 @@ body{
 
     #bread_menu{
         grid-template-areas: 
-        'b1 b2' 
-        'b3 b4';
+        'b1' 
+        'b2' 
+        'b3' 
+        'b4';
         margin: 0;
         flex-direction: row;
+        justify-content: center;
+        }
+
+    #cake_menu{
+        grid-template-areas: 
+        'c1' 
+        'c2' ;
+        margin: 0;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .img_1_div{
+        width: 100vw;
+    }
+    footer{
+        text-align: center;
+        margin-top: 5vh;
     }
 
     .bread_menu_background{
         background-color: var(--main_accent_clr);
+    }
+
+    .bread_list{
+        list-style: outside;
+        text-align: left;
     }
 
     .header_mobil{
@@ -179,15 +207,26 @@ body{
     #cafe_2, #cafe_3{
         padding-top: 10px;
     }
-    h2{
+    .cafe_list{
+        padding: 0;
+    }
+    .to_left{
         justify-content: flex-start;
+    }
+    h2{
+        justify-content: center;
     }
     li{
         width: 25vw;
         margin: 0;
-        text-align: center;
+    }
+    #bread_4, #bread_3, #bread_2{
+        padding-top: 10px;
     }
 
+    .bread_list{
+        margin: 0;
+    }
     nav, .navbar_dator, .img_2_div, #mellanrum #img_2{
         display: none;}
 }
@@ -197,14 +236,21 @@ body{
         display: none;
     }
     .img_1_div, .img_2_div{
+        width: 50vw;
+        display: flex;
         display: block;}
     #a1{
         margin-top: 0;
     }
-    .a0{
+    .aa{
         margin: 0px 20vw;
     }
-    h2{
+    .a0{
+
+        margin: 0;
+    }
+    h2, p, h3{
+        display: flex;
         justify-content: center;
     }
     li{
@@ -218,6 +264,10 @@ body{
         padding-top: 50px;
     }
 
+    .bread_list{
+        list-style-position: inside;
+    }
+
     .bread_menu_background{
         background-repeat: no-repeat;
         margin: 0;
@@ -227,6 +277,12 @@ body{
         justify-content: center;
         background-image: url(../img/bröd_bakgrund.jpg);
         background-size: cover;
+    }
+    #cake_2, #bread_4, #bread_3, #bread_2{
+        padding-top: 50px;
+    }
+    .to_left{
+        justify-content: center;
     }
     
 }
@@ -271,7 +327,7 @@ ul{
 }
 
 .navbar_mobil{
-
+    text-align: center;
     display: flex;
     padding: 0;
     margin: 0 5vw;
@@ -279,7 +335,11 @@ ul{
     align-items: center;
     height: 5vh;
 }
+
+.navbar_icon a:hover{
+    background-color: var(--main_clr_dark);
 }
+
 article{
     display: flex;
     flex-direction: column;
@@ -313,7 +373,6 @@ a{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    list-style-position: inside;
 }
 
 .cafe_list{
@@ -343,10 +402,9 @@ a{
 }
 
 .img_1_div, .img_2_div{
-    display: flex;
-    width: 50vw;
     justify-content: center;
     align-items: center;
+    display: flex;
 }
 
 .img_1_div{
@@ -381,19 +439,16 @@ a{
 #bread_2{
     grid-area: b2;
     width: 25vw;
-    padding-top: 50px;
 }
 
 #bread_3{
     grid-area: b3;
     width: 25vw;
-    padding-top: 50px;
 }
 
 #bread_4{
     grid-area: b4;
     width: 25vw;
-    padding-top: 50px;
 }
 
 #cake_0{
@@ -412,7 +467,6 @@ a{
 #cake_2{
     grid-area: c2;
     width: 50vw;
-    padding-top: 50px;
 }
 
 .cafe_0{
@@ -457,3 +511,4 @@ h2{
     display: flex;
     font-size: 3rem;
 }
+
