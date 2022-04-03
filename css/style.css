@@ -15,7 +15,7 @@ body{
 }
 
 .li_bread{
-    margin: 5px;
+    margin: 5px 10vw;
 }
 
 .container{
@@ -48,12 +48,11 @@ body{
 }
 
 #container3{
-    grid-template-rows: 15vh auto 5vh auto 10vh;
+    grid-template-rows: 15vh auto auto 10vh;
     min-height: 110vh;
     grid-template-areas: 
     'nv'
     'a1'
-    'm1'
     'a2'
     'ft'; 
 }
@@ -70,7 +69,7 @@ body{
 }
 
 #cafe_menu{
-    /* background-image: url(../img/tårta_bakgrund.jpg); */
+    background-image: url(../img/michal-parzuchowski-ItaV89TNkks-unsplash_edited.jpg);
     background-size: cover;
     margin: 0;
     width: 100vw;
@@ -90,6 +89,7 @@ body{
     margin: 0;
     flex-direction: row;
     width: 100vw;
+    margin-top: 5vh;
 }
 
 @media only screen and (max-width: 500px) {
@@ -152,6 +152,9 @@ body{
     }
 
     #bread_menu{
+        background-image: url(../img/louise-lyshoj-WHJTaLqonkU-unsplash.jpg);
+        background-size: cover;
+        background-position: center;
         grid-template-areas: 
         'b1' 
         'b2' 
@@ -167,6 +170,7 @@ body{
         'c1' 
         'c2' ;
         margin: 0;
+        margin-top: 3vh;
         flex-direction: row;
         justify-content: center;
     }
@@ -175,7 +179,7 @@ body{
     }
     footer{
         text-align: center;
-        margin-top: 5vh;
+        margin-top: 2vh;
     }
 
     .bread_menu_background{
@@ -203,7 +207,9 @@ body{
     .cafe_1{
         padding-top: 75px;
     }
-
+    #om_oss{
+        margin-top: 0;
+    }
     #cafe_2, #cafe_3{
         padding-top: 10px;
     }
@@ -217,17 +223,19 @@ body{
         justify-content: center;
     }
     li{
-        width: 25vw;
+        width: 40vw;
         margin: 0;
     }
     #bread_4, #bread_3, #bread_2{
         padding-top: 10px;
     }
-
+    #bread_4, #cake_2{
+        margin-bottom: 5vh;
+    }
     .bread_list{
         margin: 0;
     }
-    nav, .navbar_dator, .img_2_div, #mellanrum #img_2{
+    nav, .navbar_dator, .img_2_div, #img_2{
         display: none;}
 }
 
@@ -263,7 +271,9 @@ body{
     .cafe_1, #cafe_2, #cafe_3{
         padding-top: 50px;
     }
-
+    #bread_1, #bread_2, #bread_3, #bread_4{
+        width: 25vw;
+    }
     .bread_list{
         list-style-position: inside;
     }
@@ -432,23 +442,19 @@ a{
 
 #bread_1{
     grid-area: b1;
-    width: 25vw;
     padding-top: 50px;
 }
 
 #bread_2{
     grid-area: b2;
-    width: 25vw;
 }
 
 #bread_3{
     grid-area: b3;
-    width: 25vw;
 }
 
 #bread_4{
     grid-area: b4;
-    width: 25vw;
 }
 
 #cake_0{
@@ -461,7 +467,7 @@ a{
 #cake_1{
     grid-area: c1;
     width: 50vw;
-    padding-top: 50px;
+    padding-top: 60px;
 }
 
 #cake_2{
@@ -500,15 +506,27 @@ footer{
     align-items: center;
     justify-content: center;
     background-image: linear-gradient(var(--main_clr_white), var(--main_accent_clr));
-
 }
 
-#mellanrum{
-    grid-area: m1;
-}
+
 
 h2{
     display: flex;
     font-size: 3rem;
 }
 
+li a:hover{
+    color: var(--main_dark_accent_clr);
+}
+
+#nav_bars, #nav_bar{
+    position: absolute;
+    right: 5vw;
+}
+
+#nav_bar{
+    display: none;
+}
+#nav_bars{
+    display: block;
+}
