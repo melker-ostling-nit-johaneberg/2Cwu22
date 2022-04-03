@@ -1,1 +1,0 @@
-Förminska bilder

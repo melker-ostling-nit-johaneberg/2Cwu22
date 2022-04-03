@@ -12,6 +12,8 @@
 body{
     margin: 0%;
     padding: 0%;
+    width: 100vh;
+    overflow-x: hidden;
 }
 
 .li_bread{
@@ -41,6 +43,7 @@ body{
 #container2{
     grid-template-rows: 15vh auto 10vh;
     min-height: 110vh;
+    overflow-x: hidden;
     grid-template-areas: 
     'nv'
     'a1'
@@ -50,6 +53,7 @@ body{
 #container3{
     grid-template-rows: 15vh auto auto 10vh;
     min-height: 110vh;
+    overflow-x: hidden;
     grid-template-areas: 
     'nv'
     'a1'
@@ -60,6 +64,7 @@ body{
 #container4{
     grid-template-rows: 15vh auto auto 60vh 10vh;
     min-height: 110vh;
+    overflow-x: hidden;
     grid-template-areas: 
     'nv nv'
     'i1 a1'
@@ -180,6 +185,7 @@ body{
     footer{
         text-align: center;
         margin-top: 2vh;
+        border-top-style: hidden;
     }
 
     .bread_menu_background{
@@ -199,6 +205,7 @@ body{
         align-items: center;
         justify-content: center;
     } 
+
 
     .cafe_0{
         top: 100px;
@@ -277,7 +284,10 @@ body{
     .bread_list{
         list-style-position: inside;
     }
-
+    footer{
+        border-top-style: solid;
+        border-width: 2px;
+    }
     .bread_menu_background{
         background-repeat: no-repeat;
         margin: 0;
@@ -285,7 +295,7 @@ body{
         display: flex;
         align-items: center;
         justify-content: center;
-        background-image: url(../img/bröd_bakgrund.jpg);
+        background-image: url(../img/nathan-dumlao-YUzSjKG9QmU-unsplash.jpg);
         background-size: cover;
     }
     #cake_2, #bread_4, #bread_3, #bread_2{
@@ -318,6 +328,7 @@ ul{
 
     li{
     color: var(--main_clr_dark);
+    font-family: 'Noto Sans JP', sans-serif;
   }
 
 .navbar_dator{
@@ -325,17 +336,28 @@ ul{
     margin: auto;
     font-size: 20px;
     padding: 0px;
+    height: 15vh;
+    position: fixed;
+    top: 0;
+    border-bottom-style: solid;
+    border-width: 2px;
+    background-color: var(--main_clr_white);
+    z-index: 2;
 }
 
 #nav_mobil{
     position: absolute;
-    top: 10vh;
     width: 100vw;
     height: 5vh;
+    top: 10vh;
     display: none;
     background-color: var(--main_accent_clr);
 }
 
+#top, #top_2{
+    transition-property: margin-top;
+    transition-duration: 1s;
+}
 .navbar_mobil{
     text-align: center;
     display: flex;
@@ -360,6 +382,7 @@ article{
 a{
     color: var(--main_clr_dark);
     text-decoration: none;
+    font-family: 'Playfair Display SC', serif;
 }
 .a1{
     grid-area: a1;
@@ -394,8 +417,9 @@ a{
     list-style-position: inside;
 }
 
-#img_0{
+.img_0{
     position: absolute;
+    top: 3vh;
 }
 
 .img_1{
@@ -513,6 +537,7 @@ footer{
 h2{
     display: flex;
     font-size: 3rem;
+    font-family: 'Playfair Display SC', serif;
 }
 
 li a:hover{
@@ -529,4 +554,14 @@ li a:hover{
 }
 #nav_bars{
     display: block;
+}
+
+p, b{
+    font-family: 'Noto Sans JP', sans-serif;
+
+}
+
+h3{
+    font-size: 1.5em;
+    font-family: 'Playfair Display SC', serif;
 }
